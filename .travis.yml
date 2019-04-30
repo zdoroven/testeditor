@@ -17,6 +17,11 @@ script:
 
 after_success:
   - coveralls --root . -E ".*external.*" -E ".*tests.*"
-
+  - sonar-scanner
+  
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
+  
 notifications:
   email: false
