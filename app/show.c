@@ -6,7 +6,7 @@
  * This code is licensed under a MIT-style license.
  */
 
-#include "сommon.h"
+#include "common.h"
 #include "text/text.h"
 #include <assert.h>
 #include <stdio.h>
