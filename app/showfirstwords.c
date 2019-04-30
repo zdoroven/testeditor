@@ -38,6 +38,8 @@ static void showfirstwords_line(int index, char *contents, int cursor,
       printf("%c", contents[i]);
     i++;
   }
-  if (contents[i - 1] != '\n')
-    printf("\n");
+  if(i > 0){
+  	if (contents[i - 1] != '\n')
+    	printf("\n");
+	}
 }
