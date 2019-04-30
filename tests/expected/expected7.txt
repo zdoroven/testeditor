@@ -1,0 +1,5 @@
+pri|vet
+hello
+alloha
+moikka
+bonsoire
