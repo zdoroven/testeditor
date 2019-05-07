@@ -47,6 +47,7 @@ DISTFILES += \
 	expected/expected6.txt \
 	expected/expected7.txt \
 	expected/expected8.txt \
+	expected/expected9.txt \
 	input/input1.txt \
 	input/input2.txt \
 	input/input3.txt \
@@ -55,6 +56,7 @@ DISTFILES += \
 	input/input6.txt \
 	input/input7.txt \
 	input/input8.txt \
+	input/input9.txt \
     output/output1.txt \
 	output/output2.txt \
     output/output3.txt \
@@ -62,4 +64,5 @@ DISTFILES += \
     output/output5.txt \
 	output/output6.txt \
 	output/output7.txt \
-    output/output8.txt
+	output/output8.txt \
+    output/output9.txt

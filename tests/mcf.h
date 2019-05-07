@@ -100,5 +100,4 @@ TEST(mcf, test3) {
         FAIL();
     }
 }
-
 #endif // MCF_H
