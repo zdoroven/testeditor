@@ -1,14 +1,14 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <gtest/gtest.h>
-//#include <sys/io.h>
+#include <sys/io.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <stdio.h>
 #include <unistd.h>
 #define MAX 1024
 
-#define TRAVIS 0
+#define TRAVIS 1
 
 extern "C" {
 #include "common.h"
