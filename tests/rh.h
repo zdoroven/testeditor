@@ -95,4 +95,36 @@ TEST(rh, test3) {
         FAIL();
     }
 }
+
+TEST(rh, test4) {
+
+    FILE *outputFile;
+    TRAVIS ? outputFile = fopen("tests/output/output9.txt", "wb") : outputFile = fopen("C:/work/testing/testeditor/tests/output/output9.txt", "wb");
+    if (outputFile == NULL) {
+        printf("Cannot open file for output");
+        FAIL();
+    }
+    int oldstdOut = changeStream(outputFile);
+
+    text txt = create_text();
+    char inFile[MAXLINE];
+    TRAVIS ? strncpy(inFile, "tests/input/input9.txt", MAXLINE) : strncpy(inFile, "C:/work/testing/testeditor/tests/input/input9.txt", MAXLINE);
+    load(txt, inFile);
+    
+    mwcrsr(txt, 1, 1);
+    rh(txt);
+    show(txt);
+
+    returnStream(outputFile, oldstdOut);
+    FILE *expectedData;
+    TRAVIS ? expectedData = fopen("tests/expected/expected9.txt", "r") : expectedData = fopen("C:/work/testing/testeditor/tests/expected/expected9.txt", "r");
+    FILE *outputData;
+    TRAVIS ? outputData = fopen("tests/output/output9.txt", "r") : outputData = fopen("C:/work/testing/testeditor/tests/output/output9.txt", "r");
+
+    if (executeTest(expectedData, outputData) == 1) {
+        SUCCEED();
+    } else {
+        FAIL();
+    }
+}
 #endif // RH_H
