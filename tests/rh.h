@@ -110,7 +110,7 @@ TEST(rh, test4) {
     char inFile[MAXLINE];
     TRAVIS ? strncpy(inFile, "tests/input/input9.txt", MAXLINE) : strncpy(inFile, "C:/work/testing/testeditor/tests/input/input9.txt", MAXLINE);
     load(txt, inFile);
-    
+
     mwcrsr(txt, 1, 1);
     rh(txt);
     show(txt);
